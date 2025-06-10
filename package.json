@@ -1,0 +1,14 @@
+{
+  "name": "backend_project",
+  "version": "1.0.0",
+  "description": "This must be a good backend project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "backend"
+  ],
+  "author": "Keshav Bhardwaj",
+  "license": "ISC"
+}
