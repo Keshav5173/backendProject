@@ -9,11 +9,17 @@ const app = express();
 
 
 connectDb()
-app.on("error", (error)=>{
-    console.log("Error: ",(error));
-    throw error;
+.then(()=>{
+    let port = process.env.PORT || 3000;
+    app.listen(port, ()=>{
+        console.log(`App is listining on port ${port} `); 
+    })
 })
-app.listen(process.env.PORT, ()=>{
-    console.log(`App is listining on port ${process.env.PORT} `); 
+.catch((err)=>{
+    console.error("Mongo db connection error: ", err);
 })
+
+
+
+
     
