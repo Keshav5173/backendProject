@@ -15,4 +15,14 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static("public"));
 app.use(cookieParser());
 
+
+
+
+// Routes Import
+
+import router from "./routes/index.js"
+
+// Routes Middleware
+app.use("/api", router);
+
 export { app }
